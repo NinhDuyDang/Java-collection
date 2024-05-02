@@ -51,7 +51,5 @@ public class Person {
         return age == person.age;
     }
 
-    public List<Person> createPersonList() {
-        return List.of();
-    }
+
 }

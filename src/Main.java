@@ -1,9 +1,10 @@
 import model.Person;
 import service.Impl.PersonImpl;
+import service.Impl.SetExamImpl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+
+import static service.Impl.SetExamImpl.input;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,6 +35,15 @@ public class Main {
         listExam.filter(persons);
         listExam.delete(persons);
         listExam.sortPerson(persons);
+
+        SetExamImpl setExam = new SetExamImpl();
+        Set<Person> personSet = input();
+        setExam.info(personSet);
+        setExam.filter(personSet);
+        setExam.delete(personSet);
+
+
+
     }
 
     }
